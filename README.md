@@ -1,11 +1,18 @@
-<div align="center">
+# Antakya Juba - Static Website
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A pure static website for Antakya Juba, an authentic Turkish restaurant.
 
-  <h1>Built with AI Studio</h2>
+## Features
+- Pure HTML, CSS, and JavaScript
+- No build tools required
+- Tailwind CSS via CDN
+- Fully responsive design
+- GitHub Pages ready
 
-  <p>The fastest path from prompt to production with Gemini.</p>
-
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
+## Deployment
+This site is ready to be deployed directly to GitHub Pages:
+1. Push the code to a GitHub repository.
+2. Go to repository Settings > Pages.
+3. Select "Deploy from a branch".
+4. Choose the `main` branch and `/root` folder.
+5. Save and wait for the deployment to complete.

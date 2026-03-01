@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antakya Juba - Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#bf2b33",
+              "primary-dark": "#961e25",
+              "background-dark": "#1f1313",
+              "surface-dark": "#2a1a1a",
+              "border-dark": "#43282a",
+              "text-main": "#f2e8e8",
+              "text-muted": "#c2999b",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body
+    class="bg-background-dark text-slate-100 font-display antialiased selection:bg-primary selection:text-white overflow-x-hidden"
+  >
+    <div class="relative flex min-h-screen w-full flex-col">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/95 backdrop-blur supports-[backdrop-filter]:bg-background-dark/80"
+      >
+        <div
+          class="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6 lg:px-10"
+        >
+          <a href="./index.html" class="flex items-center gap-3">
+            <div
+              class="flex items-center justify-center rounded-full bg-primary/20 p-2 text-primary"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >restaurant_menu</span
+              >
+            </div>
+            <span
+              class="font-serif text-2xl font-bold tracking-tight text-white"
+              >Antakya<span class="text-primary">.</span></span
+            >
+          </a>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              href="./index.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Home</a
+            >
+            <a
+              href="./menu.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Menu</a
+            >
+            <a
+              href="./about.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >About</a
+            >
+            <a
+              href="./services.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Services</a
+            >
+            <a
+              href="./gallery.html"
+              class="text-sm transition-colors font-bold text-primary"
+              >Gallery</a
+            >
+            <a
+              href="./contact.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Contact</a
+            >
+          </nav>
+          <div class="hidden md:flex items-center gap-4">
+            <a
+              href="./contact.html"
+              class="flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary-dark shadow-lg shadow-primary/25"
+            >
+              <span>Book Now</span>
+              <span class="material-symbols-outlined text-lg"
+                >calendar_today</span
+              >
+            </a>
+          </div>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden flex items-center justify-center text-white"
+          >
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden absolute left-0 top-20 w-full border-b border-white/10 bg-background-dark px-6 py-4 md:hidden"
+        >
+          <nav class="flex flex-col gap-4">
+            <a
+              href="./index.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Home</a
+            >
+            <a
+              href="./menu.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Menu</a
+            >
+            <a
+              href="./about.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >About</a
+            >
+            <a
+              href="./services.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Services</a
+            >
+            <a
+              href="./gallery.html"
+              class="text-base transition-colors font-bold text-primary"
+              >Gallery</a
+            >
+            <a
+              href="./contact.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Contact</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex flex-1 justify-center px-4 py-10 md:px-10 lg:px-40">
+        <div
+          class="layout-content-container flex max-w-[1200px] flex-1 flex-col"
+        >
+          <!-- Hero Text -->
+          <div class="mb-10 flex flex-col gap-4 text-center md:text-left">
+            <h1
+              class="text-4xl font-black leading-tight tracking-tight text-white md:text-5xl"
+            >
+              Our Gallery
+            </h1>
+            <p
+              class="max-w-2xl text-lg font-normal leading-relaxed text-[#c2999b]"
+            >
+              A visual journey through our culinary creations, vibrant
+              atmosphere, and memorable events at Antakya Juba.
+            </p>
+          </div>
+
+          <!-- Filter Tags -->
+          <div class="mb-10 flex flex-wrap gap-3" id="gallery-filters">
+            <button
+              class="filter-btn active rounded-full bg-primary px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-primary-dark"
+              data-filter="All"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn rounded-full bg-surface-dark px-5 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-surface-dark/80 hover:text-white border border-border-dark"
+              data-filter="Food"
+            >
+              Food
+            </button>
+            <button
+              class="filter-btn rounded-full bg-surface-dark px-5 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-surface-dark/80 hover:text-white border border-border-dark"
+              data-filter="Interior"
+            >
+              Interior
+            </button>
+            <button
+              class="filter-btn rounded-full bg-surface-dark px-5 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-surface-dark/80 hover:text-white border border-border-dark"
+              data-filter="Rooftop"
+            >
+              Rooftop
+            </button>
+            <button
+              class="filter-btn rounded-full bg-surface-dark px-5 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-surface-dark/80 hover:text-white border border-border-dark"
+              data-filter="Bakery"
+            >
+              Bakery
+            </button>
+            <button
+              class="filter-btn rounded-full bg-surface-dark px-5 py-2 text-sm font-medium text-slate-300 transition-colors hover:bg-surface-dark/80 hover:text-white border border-border-dark"
+              data-filter="Events"
+            >
+              Events
+            </button>
+          </div>
+
+          <!-- Masonry Grid -->
+          <div
+            class="columns-1 gap-6 sm:columns-2 lg:columns-3"
+            id="gallery-grid"
+          >
+            <!-- Item 1 -->
+            <div
+              class="gallery-item mb-6 break-inside-avoid"
+              data-category="Food"
+            >
+              <div
+                class="group relative overflow-hidden rounded-xl bg-surface-dark"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDibLCFH3dxEcYiVt7jJtSvY0pb0DH5gdw_B1VXimJtpk3NJm0N5H09DBAXjANqNKqqREV4B7fNvJNx_ThU0KQ1b9_xWP2nPpbu1CuhpEHnfQzLH0spSFNGQsiUC-mbfC9QZEUkwAef2UCxEzaML3W1IEti9SxZktzsM8IkBgK1jmg6cdUPr8riQNJcq_VcsvSKz9n9nvPknfkZ11adqxyQUETk5hfBVgPeSc4nvIZNHtIGzGRQZ2n4ZsgVm0UUsJ1eNUWbTVlDhBo"
+                  alt="Signature Mixed Grill"
+                  class="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-full translate-y-4 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="mb-2 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm"
+                    >Food</span
+                  >
+                  <h3 class="text-xl font-bold text-white">
+                    Signature Mixed Grill
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="gallery-item mb-6 break-inside-avoid"
+              data-category="Interior"
+            >
+              <div
+                class="group relative overflow-hidden rounded-xl bg-surface-dark"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHDtnVHJkfks6SBVvHosqE7rxqTe9nmqK9_jh7CMTgWKU1BRmmbTVEGkS2B36Jnha_xO8auKEYhntNVyQjQ64Y6uYJslRViKRuVtNYjpwN8-wpTtyUEmWx8rUXn7hOimaMG3-Rpe-yHX1gGOS-QKIKWLagfPLbtTMMXbQoYoIS4YuZfT46QrU2P9pIgP2yrzKnaZyyaSs3vWJtlv0sKZRjRscUrQ6xLgzSIdI3j3nP0NFxNQCj03OspP5gxa2LlnXjGxATZvpTgBI"
+                  alt="Main Dining Hall"
+                  class="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-full translate-y-4 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="mb-2 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm"
+                    >Interior</span
+                  >
+                  <h3 class="text-xl font-bold text-white">Main Dining Hall</h3>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div
+              class="gallery-item mb-6 break-inside-avoid"
+              data-category="Bakery"
+            >
+              <div
+                class="group relative overflow-hidden rounded-xl bg-surface-dark"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJhc4wBapIyVPRS22pQ2V0WDcFwQhgHXkzF36ihajKc164-EP61VAzy4kDYwsogbtEIVD_alITM7wfpJpJ0u2fjgvTs4ou2mj8MZxhxl4l9c-GMRHTY3f4od9jThvLhR1t-c2PoKRbKejEs259uVuDFU5s9C6GonRKNPK_4rVL28WL3ePlXs8zR37CrTJKELf9VsYXFqqd5HdzprQyYFetI8M0hdzOlnUEby1aRz6UGFJ-PdXot6T0UhW8C0-Ui4qMYq_ghIfM1I"
+                  alt="Fresh Baklava"
+                  class="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-full translate-y-4 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="mb-2 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm"
+                    >Bakery</span
+                  >
+                  <h3 class="text-xl font-bold text-white">Fresh Baklava</h3>
+                </div>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div
+              class="gallery-item mb-6 break-inside-avoid"
+              data-category="Rooftop"
+            >
+              <div
+                class="group relative overflow-hidden rounded-xl bg-surface-dark"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwilRD9xBq0i7ruKTJnGyK6ZOAovhMsdx1WUYg4H1r6P87RHQUgzbnL9JTkrcBfvYBY6qs3DIEeSliQDuSiExL91qkaXnxg75Cyup8WObb2rgoPXEZzDnD0qd45n764sEB2ywTcWWSoEvxnxSx3oitmo9C1XQQSv-Q_8CrKt18DXCAWlqeLWGnYdkxHV5TjxKC0AeiJQY5ytFnijD-kOmFoV_aarzI32luIJlaf4oqCd6XDkpmVhIcWU7RGlewQ8zGnZWStxYQiRo"
+                  alt="Sunset Views"
+                  class="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-full translate-y-4 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="mb-2 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm"
+                    >Rooftop</span
+                  >
+                  <h3 class="text-xl font-bold text-white">Sunset Views</h3>
+                </div>
+              </div>
+            </div>
+            <!-- Item 5 -->
+            <div
+              class="gallery-item mb-6 break-inside-avoid"
+              data-category="Events"
+            >
+              <div
+                class="group relative overflow-hidden rounded-xl bg-surface-dark"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNdbw2KZrWnmwMfp3O_Wvr6LIl3myHn7igDr9jusXjoK8agk5JczyGCbHQNS9VAeUaHssjKMl0RHGRbJ_FVJVKcH3reKZmDy7kB7WCwbJyoqcM4Tuy_wsCZTMdwB2JN-wMLjVidp-N423Wqlnw2six7Vpt9PBI4Gq1eg8dqn-0Tf6BztllDJMsOJUbQthTYCZEsluYriRQYeDIIS6wSaQ1tvQoceQNC9XtjGly1VNL22xpRBh2GzP2cPPfmITfybktbCymTRfhUcU"
+                  alt="Private Dining Room"
+                  class="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-full translate-y-4 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="mb-2 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm"
+                    >Events</span
+                  >
+                  <h3 class="text-xl font-bold text-white">
+                    Private Dining Room
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Item 6 -->
+            <div
+              class="gallery-item mb-6 break-inside-avoid"
+              data-category="Food"
+            >
+              <div
+                class="group relative overflow-hidden rounded-xl bg-surface-dark"
+              >
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0xRxz-pikyNOIvfjUhDjqOT5gEGozPm78n-o8J-auGvTltw2Hh84z2-xnCcLhFEpPn5x5FAw15nBAgZ49Z7ZBkpx7LX8qtXmz2uzYUH2spipHPbGBSkkNdxCo8gZuVjPWiLtgm1l2RyzqcltOIZTSb6wHwp2SAVpEYl5qw3ZTmJsKlFa1BTemRX1X_lOQzWBrvk3r1JryBp-w2kCt-0eidfvR-_uvpR_XRBu-Gl3ZLzkx5enAZ7KP4kw018hEPrBRCGL2Z3taPMQ"
+                  alt="Stone Oven Lahmacun"
+                  class="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-full translate-y-4 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <span
+                    class="mb-2 inline-block rounded-full bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm"
+                    >Food</span
+                  >
+                  <h3 class="text-xl font-bold text-white">
+                    Stone Oven Lahmacun
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Load More -->
+          <div class="mt-10 flex justify-center">
+            <button
+              class="flex items-center gap-2 rounded-xl border border-border-dark bg-surface-dark px-8 py-3 text-sm font-bold text-white transition-colors hover:border-primary hover:bg-primary/10 hover:text-primary"
+            >
+              <span>Load More</span>
+              <span class="material-symbols-outlined text-lg">expand_more</span>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-[#150c0c] border-t border-white/5 pt-16 pb-8">
+        <div class="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+          >
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <div
+                  class="flex items-center justify-center rounded-full bg-primary/20 p-1.5 text-primary"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >restaurant_menu</span
+                  >
+                </div>
+                <span class="font-serif text-xl font-bold text-white"
+                  >Antakya<span class="text-primary">.</span></span
+                >
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Bringing the authentic taste of Turkey to the heart of South
+                Sudan. Experience culinary excellence and warm hospitality.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Contact Us</h4>
+              <ul class="flex flex-col gap-3 text-sm text-slate-400">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    >location_on</span
+                  >
+                  <span
+                    >Tongpiny, Near Airport Road<br />Juba, South Sudan</span
+                  >
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    >call</span
+                  >
+                  <span>+211 920 000 000</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    >mail</span
+                  >
+                  <span>info@antakyahome.com</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Quick Links</h4>
+              <ul class="flex flex-col gap-2 text-sm text-slate-400">
+                <li>
+                  <a
+                    href="./index.html"
+                    class="hover:text-primary transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./menu.html"
+                    class="hover:text-primary transition-colors"
+                    >Menu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./about.html"
+                    class="hover:text-primary transition-colors"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./services.html"
+                    class="hover:text-primary transition-colors"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./gallery.html"
+                    class="hover:text-primary transition-colors"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="hover:text-primary transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Opening Hours</h4>
+              <ul class="flex flex-col gap-2 text-sm text-slate-400">
+                <li class="flex justify-between">
+                  <span>Monday - Friday</span>
+                  <span class="text-white">10am - 11pm</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Saturday</span>
+                  <span class="text-white">10am - 12am</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Sunday</span>
+                  <span class="text-white">10am - 11pm</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-xs text-slate-500">
+              © 2024 Antakya Home Restaurant. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

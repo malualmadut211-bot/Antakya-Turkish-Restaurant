@@ -1,0 +1,26 @@
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1f1313;
+}
+::-webkit-scrollbar-thumb {
+  background: #43282a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bf2b33;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}

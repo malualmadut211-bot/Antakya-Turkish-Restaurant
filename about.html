@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antakya Juba - About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#bf2b33",
+              "primary-dark": "#961e25",
+              "background-dark": "#1f1313",
+              "surface-dark": "#2a1a1a",
+              "border-dark": "#43282a",
+              "text-main": "#f2e8e8",
+              "text-muted": "#c2999b",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body
+    class="bg-background-dark text-slate-100 font-display antialiased selection:bg-primary selection:text-white overflow-x-hidden"
+  >
+    <div class="relative flex min-h-screen w-full flex-col">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/95 backdrop-blur supports-[backdrop-filter]:bg-background-dark/80"
+      >
+        <div
+          class="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6 lg:px-10"
+        >
+          <a href="./index.html" class="flex items-center gap-3">
+            <div
+              class="flex items-center justify-center rounded-full bg-primary/20 p-2 text-primary"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >restaurant_menu</span
+              >
+            </div>
+            <span
+              class="font-serif text-2xl font-bold tracking-tight text-white"
+              >Antakya<span class="text-primary">.</span></span
+            >
+          </a>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              href="./index.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Home</a
+            >
+            <a
+              href="./menu.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Menu</a
+            >
+            <a
+              href="./about.html"
+              class="text-sm transition-colors font-bold text-primary"
+              >About</a
+            >
+            <a
+              href="./services.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Services</a
+            >
+            <a
+              href="./gallery.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Gallery</a
+            >
+            <a
+              href="./contact.html"
+              class="text-sm transition-colors font-medium text-slate-300 hover:text-primary"
+              >Contact</a
+            >
+          </nav>
+          <div class="hidden md:flex items-center gap-4">
+            <a
+              href="./contact.html"
+              class="flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary-dark shadow-lg shadow-primary/25"
+            >
+              <span>Book Now</span>
+              <span class="material-symbols-outlined text-lg"
+                >calendar_today</span
+              >
+            </a>
+          </div>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden flex items-center justify-center text-white"
+          >
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden absolute left-0 top-20 w-full border-b border-white/10 bg-background-dark px-6 py-4 md:hidden"
+        >
+          <nav class="flex flex-col gap-4">
+            <a
+              href="./index.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Home</a
+            >
+            <a
+              href="./menu.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Menu</a
+            >
+            <a
+              href="./about.html"
+              class="text-base transition-colors font-bold text-primary"
+              >About</a
+            >
+            <a
+              href="./services.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Services</a
+            >
+            <a
+              href="./gallery.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Gallery</a
+            >
+            <a
+              href="./contact.html"
+              class="text-base transition-colors font-medium text-slate-300 hover:text-primary"
+              >Contact</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-1 flex flex-col">
+        <!-- Hero Section -->
+        <section
+          class="relative flex flex-col items-center justify-center px-6 py-20 text-center md:py-32"
+        >
+          <div
+            class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-dark via-background-dark to-background-dark opacity-20"
+          ></div>
+          <div class="relative z-10 flex max-w-4xl flex-col gap-6">
+            <div
+              class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-border-dark bg-surface-dark shadow-2xl shadow-primary/20"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >history_edu</span
+              >
+            </div>
+            <h1
+              class="bg-gradient-to-br from-white to-text-muted bg-clip-text text-5xl font-black leading-tight tracking-tight text-transparent md:text-7xl"
+            >
+              Our Story
+            </h1>
+            <p class="text-xl font-medium text-primary md:text-2xl">
+              From Antakya to Juba
+            </p>
+            <p
+              class="mx-auto max-w-2xl text-lg leading-relaxed text-text-muted"
+            >
+              Bringing authentic Turkish flavors to the heart of South Sudan. A
+              culinary journey bridging two vibrant cultures through taste,
+              tradition, and hospitality.
+            </p>
+          </div>
+        </section>
+
+        <!-- Narrative Content -->
+        <section class="mx-auto w-full max-w-7xl px-6 pb-16 md:px-10 lg:px-40">
+          <div
+            class="rounded-3xl border border-border-dark bg-surface-dark/50 p-8 backdrop-blur-sm md:p-12 lg:p-16"
+          >
+            <div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
+              <div class="flex flex-col justify-center gap-6">
+                <h2 class="text-3xl font-bold text-white md:text-4xl">
+                  A Bridge Between Cultures
+                </h2>
+                <div class="h-1 w-20 rounded-full bg-primary"></div>
+                <p class="text-base leading-relaxed text-text-muted">
+                  Founded with a passion for the rich culinary traditions of
+                  Antakya (Hatay), a UNESCO City of Gastronomy, our restaurant
+                  stands as a testament to the enduring power of food to connect
+                  people.
+                </p>
+                <p class="text-base leading-relaxed text-text-muted">
+                  Our authentic Turkish chefs bring generations of heritage to
+                  every dish, crafting a premium dining experience that combines
+                  the warmth of Turkish hospitality with the vibrant, growing
+                  energy of Juba. Whether you are seeking the comfort of a
+                  stone-oven Lahmacun or the delicate layers of handmade
+                  Baklava, you are tasting history.
+                </p>
+                <div class="mt-4 flex items-center gap-4">
+                  <div class="flex -space-x-4">
+                    <div
+                      class="h-12 w-12 rounded-full border-2 border-surface-dark bg-gray-600 bg-cover bg-center"
+                      style="
+                        background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNDQ0Ii8+PC9zdmc+&quot;);
+                      "
+                    ></div>
+                    <div
+                      class="h-12 w-12 rounded-full border-2 border-surface-dark bg-gray-500 bg-cover bg-center"
+                      style="
+                        background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNTU1Ii8+PC9zdmc+&quot;);
+                      "
+                    ></div>
+                    <div
+                      class="h-12 w-12 rounded-full border-2 border-surface-dark bg-gray-400 bg-cover bg-center"
+                      style="
+                        background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNjY2Ii8+PC9zdmc+&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-sm font-bold text-white"
+                      >Meet Our Masters</span
+                    >
+                    <span class="text-xs text-text-muted"
+                      >Over 60 years combined experience</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative min-h-[400px] overflow-hidden rounded-2xl bg-surface-dark"
+              >
+                <div
+                  class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDibLCFH3dxEcYiVt7jJtSvY0pb0DH5gdw_B1VXimJtpk3NJm0N5H09DBAXjANqNKqqREV4B7fNvJNx_ThU0KQ1b9_xWP2nPpbu1CuhpEHnfQzLH0spSFNGQsiUC-mbfC9QZEUkwAef2UCxEzaML3W1IEti9SxZktzsM8IkBgK1jmg6cdUPr8riQNJcq_VcsvSKz9n9nvPknfkZ11adqxyQUETk5hfBVgPeSc4nvIZNHtIGzGRQZ2n4ZsgVm0UUsJ1eNUWbTVlDhBo&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
+                ></div>
+                <div class="absolute bottom-6 left-6 max-w-xs">
+                  <p class="text-lg font-bold text-white">
+                    "Authenticity is not just an ingredient, it is our promise."
+                  </p>
+                  <p class="mt-1 text-sm text-primary">— Head Chef Ahmet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feature Grid -->
+        <section class="bg-background-dark py-16">
+          <div
+            class="mx-auto flex max-w-7xl flex-col gap-10 px-6 md:px-10 lg:px-40"
+          >
+            <div class="flex flex-col gap-4 text-center md:text-left">
+              <h2
+                class="max-w-[720px] text-3xl font-black leading-tight tracking-tight text-white md:text-4xl"
+              >
+                The Antakya Experience
+              </h2>
+              <p class="max-w-[720px] text-base text-text-muted">
+                Discover the pillars that make our dining experience truly
+                unique in Juba.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div
+                class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
+                >
+                  <span class="material-symbols-outlined">chef_hat</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="text-lg font-bold text-white">Authentic Chefs</h3>
+                  <p class="text-sm text-text-muted">
+                    Master chefs direct from Turkey preparing traditional
+                    recipes with skilled hands.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
+                >
+                  <span class="material-symbols-outlined">eco</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="text-lg font-bold text-white">
+                    Fresh Ingredients
+                  </h3>
+                  <p class="text-sm text-text-muted">
+                    Premium spices imported from Antakya and fresh local produce
+                    sourced daily.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
+                >
+                  <span class="material-symbols-outlined">cake</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="text-lg font-bold text-white">Handmade Baklava</h3>
+                  <p class="text-sm text-text-muted">
+                    Daily crafted sweet treats made with 40 layers of crispy
+                    phyllo and Antep pistachios.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
+                >
+                  <span class="material-symbols-outlined">deck</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="text-lg font-bold text-white">
+                    Rooftop Experience
+                  </h3>
+                  <p class="text-sm text-text-muted">
+                    Stunning city views of Juba from our premium rooftop dining
+                    area and lounge.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-[#150c0c] border-t border-white/5 pt-16 pb-8">
+        <div class="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+          >
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <div
+                  class="flex items-center justify-center rounded-full bg-primary/20 p-1.5 text-primary"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >restaurant_menu</span
+                  >
+                </div>
+                <span class="font-serif text-xl font-bold text-white"
+                  >Antakya<span class="text-primary">.</span></span
+                >
+              </div>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Bringing the authentic taste of Turkey to the heart of South
+                Sudan. Experience culinary excellence and warm hospitality.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Contact Us</h4>
+              <ul class="flex flex-col gap-3 text-sm text-slate-400">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    >location_on</span
+                  >
+                  <span
+                    >Tongpiny, Near Airport Road<br />Juba, South Sudan</span
+                  >
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    >call</span
+                  >
+                  <span>+211 920 000 000</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    >mail</span
+                  >
+                  <span>info@antakyahome.com</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Quick Links</h4>
+              <ul class="flex flex-col gap-2 text-sm text-slate-400">
+                <li>
+                  <a
+                    href="./index.html"
+                    class="hover:text-primary transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./menu.html"
+                    class="hover:text-primary transition-colors"
+                    >Menu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./about.html"
+                    class="hover:text-primary transition-colors"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./services.html"
+                    class="hover:text-primary transition-colors"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./gallery.html"
+                    class="hover:text-primary transition-colors"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="hover:text-primary transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Opening Hours</h4>
+              <ul class="flex flex-col gap-2 text-sm text-slate-400">
+                <li class="flex justify-between">
+                  <span>Monday - Friday</span>
+                  <span class="text-white">10am - 11pm</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Saturday</span>
+                  <span class="text-white">10am - 12am</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Sunday</span>
+                  <span class="text-white">10am - 11pm</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-xs text-slate-500">
+              © 2024 Antakya Home Restaurant. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
